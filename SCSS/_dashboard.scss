@@ -1,0 +1,89 @@
+body {
+    max-width: 100%;
+	min-height: 100vh;
+	background: url(../images/bg-desktop.svg) no-repeat center $Violet;
+	background-size: cover;
+	position: relative;
+    overflow: hidden;
+	.wrapper {
+		@include flex(center, center, row);
+		.firstSide {
+			.logo {
+				position: absolute;
+				top: 3%;
+			}
+			margin: 10% 5% 5%;
+		}
+		.secondSide {
+            width: 100%;
+			@include flex(center, center, column);
+			h1 {
+				align-self: flex-start;
+				color: white;
+				margin-bottom: 5%;
+				width: 75%;
+				font-size: 2.5rem;
+			}
+			p {
+				font-family: "Open Sans";
+				color: white;
+				font-weight: 400;
+				width: 74%;
+				align-self: flex-start;
+				font-size: 1rem;
+			}
+			button {
+                cursor: pointer;
+				margin-top: 4%;
+				line-height: 3rem;
+				width: 30%;
+				border-radius: 25px;
+				border: hidden;
+				color: $Violet;
+				font-weight: 600;
+				align-self: flex-start;
+				box-shadow: 0px 4.5px 3.6px rgba(0, 0, 0, 0.08),
+					0px 12.5px 10px rgba(0, 0, 0, 0.089),
+					0px 30.1px 24.1px rgba(0, 0, 0, 0.085),
+					0px 100px 80px rgba(0, 0, 0, 0.07);
+                    transition: 0.3s;
+			}
+            button:hover{
+                color: white;
+                background-color: $Soft_Magenta;
+            }
+		}
+		.icons {
+			position: absolute;
+			width: 100%;
+			right: -85%;
+			bottom: 5%;
+			ion-icon {
+				border: 1px solid white;
+				border-radius: 50%;
+				padding: 0.5%;
+				margin: 0 0.5%;
+				font-size: 24px;
+				align-self: flex-end;
+				color: white;
+                transition: all 0.3s;
+			}
+            ion-icon:hover{
+                color: $Soft_Magenta;
+                border: 1px solid $Soft_Magenta;
+                cursor: pointer;
+            }
+		}
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	bottom: 0%;
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}

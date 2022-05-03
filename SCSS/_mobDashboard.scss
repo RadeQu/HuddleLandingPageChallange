@@ -1,0 +1,48 @@
+@include mobile {
+    body{
+        width: 100vw;
+        height: 100vh;
+        background: url(../images/bg-mobile.svg) no-repeat $Violet;
+        .wrapper{
+            width: 100%;
+            @include flex(center, center, column);
+            .firstSide{
+                @include flex(center,center,column);
+                .logo{
+                    align-self: start;
+                    width: 40%;
+                    position: static;
+                    margin-left: 5%;
+                    margin-bottom: 15%;
+                }
+                .webView{
+                    width: 90%;
+                }
+            }
+            .secondSide{
+                width: 75%;
+                height: 100%;
+                h1{
+                    margin-top: 10%;
+                    font-size: 1.6rem;
+                    width: 100%;
+                    text-align: center;
+                }
+                P{
+                    width: 100%;
+                    text-align: center;
+                }
+                button{
+                    margin-top: 5%;
+                    align-self: center;
+                    width: 75%;
+                }
+            }
+            .icons{
+                position: static;
+                text-align: center;
+                margin-top: 15%;
+            }
+        }
+    }
+}
